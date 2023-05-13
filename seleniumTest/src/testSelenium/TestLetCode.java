@@ -3,7 +3,9 @@ package testSelenium;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +33,8 @@ public class TestLetCode {
 		WebElement insideBox=driver.findElement(By.id("getMe"));
 		String boxinside=insideBox.getAttribute("value");
 		System.out.println(boxinside);
+		
+		
 		
 		
 		WebElement Textclear=driver.findElement(By.id("clearMe"));
@@ -74,6 +78,8 @@ public class TestLetCode {
 		WebElement candh=driver.findElement(By.id("isDisabled"));
 		candh.click();
 		
+		Thread.sleep(3000);
+		
 		//--------------------------------------------------------------//
 		
 		driver.navigate().to("https://letcode.in/dropdowns");
@@ -102,6 +108,33 @@ public class TestLetCode {
 		}
 		int tot=suball.size();
 		System.out.println(tot);
+		Thread.sleep(3000);
+
+		
+		//----------------------------------------------------
+		driver.navigate().to("https://letcode.in/alert");
+		
+		WebElement aclick=driver.findElement(By.id("accept"));
+		aclick.click();
+		Alert alr=driver.switchTo().alert();
+		alr.accept();
+		
+		Thread.sleep(3000);
+
+		WebElement confirm=driver.findElement(By.id("confirm"));
+		confirm.click();
+		Alert alr1=driver.switchTo().alert();
+		alr1.accept();
+		Thread.sleep(3000);
+		
+		WebElement prm=driver.findElement(By.id("prompt"));
+		prm.click();
+		
+		Alert alr2=driver.switchTo().alert();
+		alr2.sendKeys("Suriya");
+		alr2.accept();
+		
+		
 		
 		
 		
