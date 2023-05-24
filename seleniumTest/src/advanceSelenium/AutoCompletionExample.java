@@ -30,7 +30,7 @@ public class AutoCompletionExample {
 		System.out.println(tot);
 
 		for (WebElement webElement : gitlis) {
-			if(webElement.getText().equals("https://github.com/suriyaravi20/SeleniumTest"))
+			if(webElement.getText().equals("https://github.com/suriyaravi20/LearnJava"))
 			{webElement.click();
 			System.out.println("selected"+webElement.getText());
 			break;

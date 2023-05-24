@@ -28,8 +28,9 @@ public class DropDownExample {
 		//print all values in dropdown...........................	
 		WebElement total=driver.findElement(By.id("lang"));
 		Select select1=new Select(total);
-		List<WebElement> li=select1.getOptions();
-		int num=li.size();
+		List<WebElement> lii=select1.getOptions();
+		System.out.println();
+		int num=lii.size();
 		System.out.println(num);
 
 		//select the dropdown using sendkeys and multi value....................
